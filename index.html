@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dagoretti proto</title>
+  <link rel="stylesheet" href="styles/main.css" />
+</head>
+<body>
+  <header class="main-header">
+    <nav class="navbar">
+      <a href="index.html">Home</a>
+      <a href="menu.html">Menu</a>
+      <a href="reserve.html">Reserve</a>
+      <a href="location.html">Location</a>
+    </nav>
+  </header>
+
+  <section class="hero-slider">
+  <div class="hero-section">
+    <div class="overlay">
+      <h1>Lorem ipsum dolor, sit amet  quos rem!</h1>
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perspiciatis reiciendis animi quos quo culpa in inventore ratione possimus! Nemo voluptates exercitationem quos necessitatibus quasi qui voluptatem vel itaque earum blanditiis?</p>
+      <a href="reserve.html" class="reserve-btn">Reserve Now</a>
+    </div>
+  </div>
+</section>
+
+
+  <section class="chefs-recommendation">
+    <h2>Chef’s Recommendation</h2>
+    <div class="dishes">
+      <div class="dish">
+        <img src="images/dish1.jpg" alt="Dish 1">
+        <h3>Grilled Herb Chicken</h3>
+        <p>Chicken, rosemary, thyme, lemon zest</p>
+      </div>
+      <div class="dish">
+        <img src="images/dish2.jpg" alt="Dish 2">
+        <h3>Vegetarian Delight</h3>
+        <p>Spinach, mushrooms, bell peppers, feta</p>
+      </div>
+      <div class="dish">
+        <img src="images/dish3.jpg" alt="Dish 3">
+        <h3>Ocean Breeze Pasta</h3>
+        <p>Shrimp, garlic butter, parsley, linguine</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="about-section">
+    <h2>About Us</h2>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio veritatis saepe, similique iure fugit consectetur odit illo eaque ipsum. Numquam molestias totam sit accusamus reiciendis. Quae odio quo rerum tempora!
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, amet. Rem hic repellat animi officia ut, possimus facilis, molestiae rerum sint explicabo magni ipsum alias ea perspiciatis autem? Cum, est!
+    </p>
+    <button onclick="openGallery()">View Gallery</button>
+    <!-- Gallery Modal -->
+<div id="galleryModal" class="gallery-modal" onclick="closeGallery()">
+  <div class="gallery-content">
+    <img src="images/gallery1.jpg" alt="Gallery Image 1">
+    <img src="images/gallery2.jpg" alt="Gallery Image 2">
+    <img src="images/gallery3.jpg" alt="Gallery Image 3">
+  </div>
+</div>
+
+  </section>
+
+  <section class="review-section">
+    <h2>Customer Reviews</h2>
+    <div class="reviews">
+      <!-- Placeholder reviews -->
+      <div class="review">
+        <p>Amazing atmosphere and food. Will definitely come back!</p>
+        <button onclick="likeReview(this)">👍<span>0</span></button>
+          <button onclick="dislikeReview(this)">👎<span>0</span></button>
+      </div>
+      <!-- Add 4 more similar review blocks -->
+    </div>
+    <form class="review-form">
+      <textarea placeholder="Write your review here..."></textarea>
+      <div id="charCount">...0</div>
+      <button type="submit">Submit</button>
+    </form>
+  </section>
+
+  <footer class="footer">
+    <p>Contact: 0757157077</p>
+    <p>Instagram: @me | Facebook: name</p>
+    <p>Email: name@gmail.com</p>
+  </footer>
+
+  <script src="scripts/slider.js"></script>
+   <script src="scripts/gallery.js"></script>
+   <script src="scripts/review.js"></script>
+   <script>
+    const images = [
+    "images/hero1.jpg",
+    "images/hero2.jpg",
+    "images/hero3.jpg"
+  ];
+
+  let index = 0;
+  const heroSection = document.querySelector(".hero-section");
+
+  function changeBackground() {
+    heroSection.style.backgroundImage = `url('${images[index]}')`;
+    index = (index + 1) % images.length;
+  }
+
+  // Initial call
+  changeBackground();
+  // Change every 20 seconds
+  setInterval(changeBackground, 20000);
+   </script>
+</body>
+</html>

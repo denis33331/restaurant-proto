@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Menu - Dagoretti</title>
+  <link rel="stylesheet" href="styles/main.css" />
+  <style>
+    .menu-container {
+      max-width: 1000px;
+      margin: 3rem auto;
+      text-align: center;
+    }
+
+    .menu-dropdown {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .menu-item {
+      position: relative;
+    }
+
+    .menu-item > button {
+      background: #ff8800;
+      color: white;
+      border: none;
+      padding: 0.75rem 1.5rem;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .submenu {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background: white;
+      border: 1px solid #ccc;
+      z-index: 1000;
+      border-radius: 5px;
+      min-width: 200px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .submenu a {
+      display: block;
+      padding: 10px;
+      text-decoration: none;
+      color: #333;
+    }
+
+    .submenu a:hover {
+      background: #f0f0f0;
+    }
+
+    .menu-item:hover .submenu {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <header class="main-header">
+    <nav class="navbar">
+      <a href="index.html">Home</a>
+      <a href="menu.html">Menu</a>
+      <a href="reserve.html">Reserve</a>
+      <a href="location.html">Location</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="menu-container">
+      <h1>Explore Our Menu</h1>
+      <div class="menu-dropdown">
+        <div class="menu-item">
+          <button>Vegetarian Diet</button>
+          <div class="submenu">
+            <a href="#">Breakfast</a>
+            <a href="#">Lunch</a>
+            <a href="#">Dinner</a>
+          </div>
+        </div>
+        <div class="menu-item">
+          <button>Allergen Diet</button>
+          <div class="submenu">
+            <a href="#">Breakfast</a>
+            <a href="#">Lunch</a>
+            <a href="#">Dinner</a>
+          </div>
+        </div>
+        <div class="menu-item">
+          <button>Meat Diet</button>
+          <div class="submenu">
+            <a href="#">Breakfast</a>
+            <a href="#">Lunch</a>
+            <a href="#">Dinner</a>
+          </div>
+        </div>
+        <div class="menu-item">
+          <button>Non-Alcoholic Drinks</button>
+          <div class="submenu">
+            <a href="#">Fizzy Drinks</a>
+            <a href="#">Non-Fizzy Drinks</a>
+          </div>
+        </div>
+        <div class="menu-item">
+          <button>Alcoholic Drinks</button>
+          <div class="submenu">
+            <a href="#">Liquor</a>
+            <a href="#">Wine</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+ <section>
+    <h1>Our Menu</h1>
+
+    <!-- Starters -->
+    <h2>Starters</h2>
+    <div class="dishes">
+      <div class="dish">
+        <img src="images/dish1.jpg" alt="Fresh Garden Salad">
+        <h3>Fresh Garden Salad - Ksh 450</h3>
+        <p>Mixed greens, tomatoes, cucumbers, onions, lemon vinaigrette</p>
+      </div>
+      <div class="dish">
+        <img src="images/dish2.jpg" alt="Chicken Wings">
+        <h3>Chicken Wings - Ksh 600</h3>
+        <p>Marinated chicken wings, BBQ sauce, chili flakes</p>
+      </div>
+    </div>
+
+    <!-- Main Courses -->
+    <h2>Main Courses</h2>
+    <div class="dishes">
+      <div class="dish">
+        <img src="images/dish1.jpg" alt="Grilled Herb Chicken">
+        <h3>Grilled Herb Chicken - Ksh 1200</h3>
+        <p>Chicken breast, rosemary, thyme, lemon zest, olive oil</p>
+      </div>
+      <div class="dish">
+        <img src="images/dish3.jpg" alt="Ocean Breeze Pasta">
+        <h3>Ocean Breeze Pasta - Ksh 1100</h3>
+        <p>Shrimp, garlic butter, parsley, linguine pasta</p>
+      </div>
+      <div class="dish">
+        <img src="images/dish2.jpg" alt="Vegetarian Delight">
+        <h3>Vegetarian Delight - Ksh 950</h3>
+        <p>Spinach, mushrooms, bell peppers, feta cheese</p>
+      </div>
+    </div>
+
+    <!-- Desserts -->
+    <h2>Desserts</h2>
+    <div class="dishes">
+      <div class="dish">
+        <img src="images/gallery1.jpg" alt="Chocolate Lava Cake">
+        <h3>Chocolate Lava Cake - Ksh 550</h3>
+        <p>Rich chocolate cake with a molten center, served with vanilla ice cream</p>
+      </div>
+      <div class="dish">
+        <img src="images/gallery2.jpg" alt="Seasonal Fruit Platter">
+        <h3>Seasonal Fruit Platter - Ksh 400</h3>
+        <p>A mix of fresh seasonal fruits</p>
+      </div>
+    </div>
+
+    <!-- Beverages -->
+    <h2>Beverages</h2>
+    <div class="dishes">
+      <div class="dish">
+        <img src="images/gallery3.jpg" alt="Fresh Juice">
+        <h3>Freshly Squeezed Juice - Ksh 300</h3>
+        <p>Choice of orange, mango, pineapple, or passion fruit</p>
+      </div>
+      <div class="dish">
+        <img src="images/gallery4.jpg" alt="House Wine">
+        <h3>House Wine - Ksh 800</h3>
+        <p>Red or white, served by the glass</p>
+      </div>
+      <div class="dish">
+        <img src="images/gallery5.jpg" alt="Bottled Water">
+        <h3>Bottled Water - Ksh 150</h3>
+        <p>500ml still or sparkling</p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>Contact: 0757157077</p>
+    <p>Instagram: @name | Facebook: name</p>
+    <p>Email: name@gmail.com</p>
+  </footer>
+</body>
+</html>
